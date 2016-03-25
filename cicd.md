@@ -1,99 +1,133 @@
-# Orchestration
+---
+author: Pierre Radermecker
+title: Tasks CICD
+...
 
-## TODO Change pg<sub>hba</sub> configuration     :salt:pgserver:
+Orchestration
+=============
 
-In the saltmaster of testing and staging
+TODO Change pg~hba~ configuration<span class="tag" data-tag-name="salt"></span><span class="tag" data-tag-name="pgserver"></span>
+---------------------------------------------------------------------------------------------------------------------------------
 
-## TODO migration & support for all stacks
+In the pgserver we need to accept all traffic from 195.244.162.100. to
+allow the testing and staging saltmaster to connect.
 
-[deps on projects]
+TODO migration & support for all stacks
+---------------------------------------
 
-## TODO Fine tunings
+\[deps on projects\]
 
-## TODO Add scripts
+TODO Fine tunings
+-----------------
 
-### TODO Remove certs     :salt:puppet:
+TODO Add scripts
+----------------
 
-## TODO SOP
+### TODO Remove certs<span class="tag" data-tag-name="salt"></span><span class="tag" data-tag-name="puppet"></span>
 
-# Puppet 3
+TODO SOP
+--------
 
-## TODO Middleware stack migration
+Puppet 3
+========
 
-## TODO Migrate all jenkins slaves     :jenkins:puppet:
+TODO Middleware stack migration
+-------------------------------
 
-[deps on project]
+TODO Migrate all jenkins slaves<span class="tag" data-tag-name="jenkins"></span><span class="tag" data-tag-name="puppet"></span>
+--------------------------------------------------------------------------------------------------------------------------------
 
-## TODO Migrate all other stacks
+\[deps on project\]
 
-[deps on projects]
+TODO Migrate all other stacks
+-----------------------------
 
-## TODO SOP
+\[deps on projects\]
 
-# Support/Services
+TODO SOP
+--------
 
-## TODO Improve the puppet stack update process
+Support/Services
+================
 
-## support CICD for "projects"
+TODO Improve the puppet stack update process
+--------------------------------------------
 
-## Update all CICD middleware to CentOS 7.2
+support CICD for "projects"
+---------------------------
 
-## Update the Jenkins master
+Update all CICD middleware to CentOS 7.2
+----------------------------------------
 
-# Improve the feedback loop
+Update the Jenkins master
+-------------------------
 
-## TODO Replace cron with push in testing     :jenkins:salt:puppet:
+Improve the feedback loop
+=========================
+
+TODO Replace cron with push in testing<span class="tag" data-tag-name="jenkins"></span><span class="tag" data-tag-name="salt"></span><span class="tag" data-tag-name="puppet"></span>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### TODO in testing
 
 ### TODO in prod
 
-## TODO Improve build time     :jenkins:
+TODO Improve build time<span class="tag" data-tag-name="jenkins"></span>
+------------------------------------------------------------------------
 
-# GPG
+GPG
+===
 
 Infrastructure to protect all sensitive configuration data (hiera)
 
-## TODO spread usage to all stacks
+TODO spread usage to all stacks
+-------------------------------
 
-[deps on projects]
+\[deps on projects\]
 
-# Docker
+Docker
+======
 
-## DONE Configure registry in testing     :docker:
+DONE Configure registry in testing<span class="tag" data-tag-name="docker"></span>
+----------------------------------------------------------------------------------
 
-## Jenkins
+Jenkins
+-------
 
-### TODO new jobs to build images     :jenkins:docker:
+### TODO new jobs to build images<span class="tag" data-tag-name="jenkins"></span><span class="tag" data-tag-name="docker"></span>
 
-### TODO new specific repo to build images     :docker:
+### TODO new specific repo to build images<span class="tag" data-tag-name="docker"></span>
 
-### TODO Change librarian to write on disk with the local userid     :docker:puppet:
+### TODO Change librarian to write on disk with the local userid<span class="tag" data-tag-name="docker"></span><span class="tag" data-tag-name="puppet"></span>
 
-## TODO SOP
+TODO SOP
+--------
 
-# Reporting
+Reporting
+=========
 
-## TODO Setup and configure Foreman
+TODO Setup and configure Foreman
+--------------------------------
 
-## TODO [PostgreREST](http://postgrest.com)
+TODO [PostgreREST](http://postgrest.com)
+----------------------------------------
 
-# VCloud API
+VCloud API
+==========
 
 Extension des points de service via l'API
 
-# Q4/2017
+TOS usage \[Boris\]
+===================
 
-## Puppet 4
+TODO Nexus
+----------
 
-## Docker (or another container technology) in production
+TODO use puppet to setup pgpool
+-------------------------------
 
-# TOS usage [Boris]
+TODO use puppet to setup Postgresql
+-----------------------------------
 
-## TODO Nexus
-
-## TODO use puppet to setup pgpool
-
-## TODO use puppet to setup Postgresql
-
-## TODO use puppet to setup Alfresco (2017 ?)
+TODO use puppet to setup Alfresco (2017 ?)
+------------------------------------------
