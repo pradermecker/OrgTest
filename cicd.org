@@ -5,6 +5,7 @@
 #+LaTeX_HEADER: \usepackage{paralist}
 #+LaTeX_HEADER: \usepackage{titlesec}
 #+LaTeX_HEADER: \titleformat{\subsection} {\normalfont\bfseries}{\thesubsection}{1em}{}
+#+LaTeX_HEADER: \let\itemize\compactitem
 #+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \let\enumerate\compactenum
 #+LaTeX_HEADER: \usepackage[scaled]{berasans}
@@ -13,9 +14,9 @@
 #+OPTIONS: H:2 num:1 tags:nil tasks:todo todo:nil e:t d:nil p:nil -:t ::t \n:nil f:t *:t <:t
 
 :Rational:
-This document structure is strict:
-- one level rendered as header
-- second level is TODO using [%]
+The document is structured using:
+- The first head is a title
+- second level is  a TODO using [%]
 - third level is checkbox (and consequently cannot be scheduled or tagged)
 When exporting:
 - DONE items are removed (see `tasks` option)
@@ -23,30 +24,39 @@ When exporting:
 :END:
 
 * Orchestration
-** TODO configure Salt master in prod/staging/testing [0%]
-- [ ] Change 'pg_hba' configuration
+** TODO Configure Salt master in prod/staging/testing [50%]
+- [ ] configure nginx of the pgserver to serve the different salt dbs
+- [X] change 'pg_hba' configuration
 In the pgserver we need to accept all traffic from 195.244.162.100
 to allow the testing and staging saltmaster to connect.
-** TODO support other stacks [%]
+** TODO Support other stacks [%]
 - [ ] BOS
-** TODO add scripts [0%]
-- [ ] Remove certs                                              :salt:puppet:
-** TODO documentation [%]
-- [ ] SOP
+** TODO Add scripts [0%]
+- [ ] remove certs
+** TODO Write SOP
 * Puppet 3
-** TODO update middleware servers to CentOS 7.2
+** TODO Update middleware servers to CentOS 7.2
 All servers can be upgraded except the jenkins/slaves
-- [ ] Upgrades all servers but jenkins/slaves
-- [ ] Create a docker image for Pulp Admin                   :jenkins:docker:
-** TODO Middleware stack migration
-** TODO Migrate all jenkins slaves                          :jenkins:puppet:
-[deps on project]
-** TODO Migrate all other stacks
-[deps on projects]
-** TODO SOP
+- [ ] upgrades all servers but jenkins/slaves
+- [ ] create a docker image for Pulp Admin
+** TODO Migration
+*** TODO middleware
+*** TODO all jenkins slaves                                  :jenkins:puppet:
+# deps on project
+*** TODO all other stacks
+# deps on projects
+** TODO Write SOP
+* Docker
+** DONE Configure registry in testing                               :docker:
+CLOSED: [2016-03-24 Thu 17:19]
+** Automate building images [%]                              :jenkins:docker:
+- [ ] new specific repo to build images
+- [ ] change librarian to write on disk with the local userid :docker:puppet:
+- [ ] language-puppet job
+** TODO Write SOP
 * Support/Services
 ** Improve the puppet stack update process
-** support CICD for "projects"
+** Support CICD for "projects"
 ** Update the Jenkins master
 * Improve the feedback loop
 ** TODO Replace cron with push in testing [0/2]         :jenkins:salt:puppet:
@@ -54,20 +64,15 @@ All servers can be upgraded except the jenkins/slaves
 - [ ] in prod
 ** TODO Improve build time                                         :jenkins:
 * GPG
-Infrastructure to protect all sensitive configuration data (hiera)
-** TODO spread usage to all stacks
-[deps on projects]
-* Docker
-** DONE Configure registry in testing                               :docker:
-CLOSED: [2016-03-24 Thu 17:19]
-** Jenkins
-- [ ] new jobs to build images                               :jenkins:docker:
-- [ ] new specific repo to build images                              :docker:
-- [ ] Change librarian to write on disk with the local userid :docker:puppet:
-** TODO SOP
-* Reporting
-** TODO Setup and configure Foreman
-** TODO [[http://postgrest.com][PostgreREST]]
+Infrastructure to protect all sensitive configuration hiera data
+** TODO Spread usage to all stacks
+# deps on projects
+* Foreman
+** DONE Setup up Foreman
+CLOSED: [2016-04-01 Fri 18:57]
+- [X] prod
+- [X] testing
+* Postgrest
 * VCloud API
 Extension des points de service via l'API
 * TOS usage [Boris]
