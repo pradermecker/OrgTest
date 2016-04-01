@@ -3,26 +3,40 @@
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
 #+LaTeX_CLASS_OPTIONS: [koma,a4paper,10pt,numbers=endperiod,listings-es,microtype,paralist,colorlinks=true,urlcolor=blue]
 #+LaTeX_HEADER: \usepackage{paralist}
+#+LaTeX_HEADER: \usepackage{titlesec}
+#+LaTeX_HEADER: \titleformat{\subsection} {\normalfont\bfseries}{\thesubsection}{1em}{}
+#+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \let\enumerate\compactenum
 #+LaTeX_HEADER: \usepackage[scaled]{berasans}
-#+LaTeX_HEADER: \let\enumerate\inparaenum
 #+LaTeX_HEADER: \usepackage[cache=false]{minted}
 #+LaTeX_HEADER: \usemintedstyle{emacs}
-#+OPTIONS: H:1 num:nil tags:nil tasks:todo todo:nil e:t p:nil -:t ::t \n:nil f:t *:t <:t
-* Orchestration
-** Change 'pg_hba' configuration
-SCHEDULED: <2016-03-25 Fri>
+#+OPTIONS: H:2 num:1 tags:nil tasks:todo todo:nil e:t d:nil p:nil -:t ::t \n:nil f:t *:t <:t
 
-in the pgserver we need to accept all traffic from 195.244.162.100
+:Rational:
+This document structure is strict:
+- one level rendered as header
+- second level is TODO using [%]
+- third level is checkbox (and consequently cannot be scheduled or tagged)
+When exporting:
+- DONE items are removed (see `tasks` option)
+- TODO items are subsection (see `H` option) and `titlesec` is used to customize its appearance
+:END:
+
+* Orchestration
+** TODO configure Salt master in prod/staging/testing [0%]
+- [ ] Change 'pg_hba' configuration
+In the pgserver we need to accept all traffic from 195.244.162.100
 to allow the testing and staging saltmaster to connect.
-** migration & support for all stacks ::
-[deps on projects]
-** TODO Fine tunings
-** TODO Add scripts
+** TODO support other stacks [%]
+- [ ] BOS
+** TODO add scripts [0%]
 - [ ] Remove certs                                              :salt:puppet:
-** TODO SOP
+** TODO documentation [%]
+- [ ] SOP
 * Puppet 3
-** TODO Update all CICD middleware to CentOS 7.2
+** TODO update middleware servers to CentOS 7.2
+All servers can be upgraded except the jenkins/slaves
+- [ ] Upgrades all servers but jenkins/slaves
 - [ ] Create a docker image for Pulp Admin                   :jenkins:docker:
 ** TODO Middleware stack migration
 ** TODO Migrate all jenkins slaves                          :jenkins:puppet:
@@ -58,14 +72,7 @@ CLOSED: [2016-03-24 Thu 17:19]
 Extension des points de service via l'API
 * TOS usage [Boris]
 ** TODO Nexus
+** TODO use puppet to setup pgserver
 ** TODO use puppet to setup pgpool
 ** TODO use puppet to setup Postgresql
 ** TODO use puppet to setup Alfresco (2017 ?)
-* Testme
-#+BEGIN_SRC sh
-echo $HOME > /dev/null
-nix-env -qa ".*hello"
-#+END_SRC
-* OtherTest
-- Title 1 :: you need ``paralist'' package to reproduce this example.
-- Title 2 :: you need ``paralist'' package to reproduce this example.
