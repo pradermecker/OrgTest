@@ -1,18 +1,29 @@
-#+TITLE: Tasks CICD
+#+TITLE: TODO CICD
+#+LaTeX_CLASS: pi3r-org-article
+#+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
+#+LaTeX_CLASS_OPTIONS: [koma,a4paper,10pt,numbers=endperiod,listings-es,microtype,paralist,colorlinks=true,urlcolor=blue]
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LaTeX_HEADER: \let\enumerate\compactenum
+#+LaTeX_HEADER: \usepackage[scaled]{berasans}
+#+LaTeX_HEADER: \let\enumerate\inparaenum
+#+LaTeX_HEADER: \usepackage[cache=false]{minted}
+#+LaTeX_HEADER: \usemintedstyle{emacs}
+#+OPTIONS: H:1 num:nil tags:nil tasks:todo todo:nil e:t p:nil -:t ::t \n:nil f:t *:t <:t
 * Orchestration
-** TODO Change pg_hba configuration                          :salt:pgserver:
+** Change 'pg_hba' configuration
 SCHEDULED: <2016-03-25 Fri>
-In the pgserver we need to accept all traffic from 195.244.162.100.
+
+in the pgserver we need to accept all traffic from 195.244.162.100
 to allow the testing and staging saltmaster to connect.
-** TODO migration & support for all stacks
+** migration & support for all stacks ::
 [deps on projects]
 ** TODO Fine tunings
 ** TODO Add scripts
-*** TODO Remove certs                                         :salt:puppet:
+- [ ] Remove certs                                              :salt:puppet:
 ** TODO SOP
 * Puppet 3
 ** TODO Update all CICD middleware to CentOS 7.2
-*** TODO Create a docker image for Pulp Admin              :jenkins:docker:
+- [ ] Create a docker image for Pulp Admin                   :jenkins:docker:
 ** TODO Middleware stack migration
 ** TODO Migrate all jenkins slaves                          :jenkins:puppet:
 [deps on project]
@@ -24,9 +35,9 @@ to allow the testing and staging saltmaster to connect.
 ** support CICD for "projects"
 ** Update the Jenkins master
 * Improve the feedback loop
-** TODO Replace cron with push in testing               :jenkins:salt:puppet:
-*** TODO in testing
-*** TODO in prod
+** TODO Replace cron with push in testing [0/2]         :jenkins:salt:puppet:
+- [ ] in testing
+- [ ] in prod
 ** TODO Improve build time                                         :jenkins:
 * GPG
 Infrastructure to protect all sensitive configuration data (hiera)
@@ -36,9 +47,9 @@ Infrastructure to protect all sensitive configuration data (hiera)
 ** DONE Configure registry in testing                               :docker:
 CLOSED: [2016-03-24 Thu 17:19]
 ** Jenkins
-*** TODO new jobs to build images                          :jenkins:docker:
-*** TODO new specific repo to build images                         :docker:
-*** TODO Change librarian to write on disk with the local userid :docker:puppet:
+- [ ] new jobs to build images                               :jenkins:docker:
+- [ ] new specific repo to build images                              :docker:
+- [ ] Change librarian to write on disk with the local userid :docker:puppet:
 ** TODO SOP
 * Reporting
 ** TODO Setup and configure Foreman
@@ -50,3 +61,11 @@ Extension des points de service via l'API
 ** TODO use puppet to setup pgpool
 ** TODO use puppet to setup Postgresql
 ** TODO use puppet to setup Alfresco (2017 ?)
+* Testme
+#+BEGIN_SRC sh
+echo $HOME > /dev/null
+nix-env -qa ".*hello"
+#+END_SRC
+* OtherTest
+- Title 1 :: you need ``paralist'' package to reproduce this example.
+- Title 2 :: you need ``paralist'' package to reproduce this example.
