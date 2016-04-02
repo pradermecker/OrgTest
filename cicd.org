@@ -1,17 +1,21 @@
 #+TITLE: TODO CICD
 #+LaTeX_CLASS: pi3r-org-article
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
-#+LaTeX_CLASS_OPTIONS: [koma,a4paper,10pt,numbers=endperiod,listings-es,microtype,paralist,colorlinks=true,urlcolor=blue]
+#+LaTeX_CLASS_OPTIONS: [numbers=endperiod,colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
+#+LaTeX_HEADER: \addtokomafont{subsection}{\normalsize}
+#+LaTeX_HEADER: \usepackage{lmodern}
 #+LaTeX_HEADER: \usepackage{paralist}
-#+LaTeX_HEADER: \usepackage{titlesec}
-#+LaTeX_HEADER: \titleformat{\subsection} {\normalfont\bfseries}{\thesubsection}{1em}{}
 #+LaTeX_HEADER: \let\itemize\compactitem
 #+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \let\enumerate\compactenum
 #+LaTeX_HEADER: \usepackage[scaled]{berasans}
 #+LaTeX_HEADER: \usepackage[cache=false]{minted}
 #+LaTeX_HEADER: \usemintedstyle{emacs}
-#+OPTIONS: H:2 num:1 tags:nil tasks:todo todo:nil e:t d:nil p:nil -:t ::t \n:nil f:t *:t <:t
+#+LaTeX_HEADER: \makeatletter
+#+LaTeX_HEADER: \renewcommand\maketitle{\begin{center} {\large\bfseries\@title\par\vspace{0.3em}} {\small\@date} \end{center}}
+#+LaTeX_HEADER: \makeatother
+#+OPTIONS: H:2 num:2 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil -:t ::t \n:nil f:t *:t <:t
+
 
 :Rational:
 The document is structured using:
