@@ -2,21 +2,22 @@
 #+LaTeX_CLASS: pi3r-org-article
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
 #+LaTeX_CLASS_OPTIONS: [colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
-#+LaTeX_HEADER: \addtokomafont{subsection}{\normalsize}
 #+LaTeX_HEADER: \usepackage{lmodern}
-#+LaTeX_HEADER: \usepackage{paralist}
-#+LaTeX_HEADER: \let\itemize\compactitem
-#+LaTeX_HEADER: \let\description\compactdesc
-#+LaTeX_HEADER: \let\enumerate\compactenum
+#+LaTeX_HEADER: \usepackage{enumitem}
+# #+LaTeX_HEADER: \usepackage{paralist}
+# #+LaTeX_HEADER: \addtokomafont{subsection}{\normalsize}
+# #+LaTeX_HEADER: \let\itemize\compactitem
+# #+LaTeX_HEADER: \let\description\compactdesc
+# #+LaTeX_HEADER: \let\enumerate\compactenum
 #+LaTeX_HEADER: \usepackage[scaled]{berasans}
 #+LaTeX_HEADER: \usepackage[cache=false]{minted}
 #+LaTeX_HEADER: \usemintedstyle{emacs}
 #+LaTeX_HEADER: \makeatletter
 #+LaTeX_HEADER: \renewcommand\maketitle{\begin{center} {\Large\bfseries\sffamily \@title \hspace{0.4em} {\tiny\sffamily \@date} \par\vspace{0.7em}} \end{center}}
 #+LaTeX_HEADER: \makeatother
+#+LaTeX_HEADER: \setlist[enumerate]{label=\alph*. }
 #+LaTeX_HEADER: \renewcommand{\thesection}{\arabic{section}.}
-#+LaTeX_HEADER: \renewcommand{\thesubsection}{$\bullet$}
-#+LaTeX_HEADER: \renewcommand{\labelitemi}{$-$}
+
 #+OPTIONS: H:2 num:2 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil -:t ::t \n:nil f:t *:t <:t
 
 
