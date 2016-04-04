@@ -1,8 +1,8 @@
 #+TITLE: TODO CICD
 #+LaTeX_CLASS: pi3r-org-article
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
-#+LaTeX_CLASS_OPTIONS: [colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
-#+LaTeX_HEADER: \usepackage{lmodern}
+#+LaTeX_CLASS_OPTIONS: [numbers=noenddot,colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
+#+LaTeX_HEADER: \addtokomafont{section}{\large}
 #+LaTeX_HEADER: \usepackage{paralist}
 #+LaTeX_HEADER: \let\itemize\compactitem
 #+LaTeX_HEADER: \let\description\compactdesc
@@ -10,9 +10,10 @@
 #+LaTeX_HEADER: \makeatletter
 #+LaTeX_HEADER: \renewcommand\maketitle{\begin{center} {\Large\bfseries\sffamily \@title \hspace{0.4em} {\tiny\sffamily \@date} \par\vspace{0.7em}} \end{center}}
 #+LaTeX_HEADER: \makeatother
-#+LaTeX_HEADER: \renewcommand{\thesection}{\Roman{section}}
+#+LaTeX_HEADER: \renewcommand{\thesection}{\Roman{section}.}
+#+LaTeX_HEADER: \renewcommand{\theparagraph}{\small(\arabic{paragraph})}
 #+LaTeX_HEADER: \renewcommand{\labelitemii}{$-$}
-#+OPTIONS: H:2 num:1 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil \n:nil f:t *:t
+#+OPTIONS: H:2 num:5 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil \n:nil f:t *:t
 
 
 :Rational:
