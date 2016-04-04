@@ -3,22 +3,16 @@
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
 #+LaTeX_CLASS_OPTIONS: [colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
 #+LaTeX_HEADER: \usepackage{lmodern}
-#+LaTeX_HEADER: \usepackage{enumitem}
-# #+LaTeX_HEADER: \usepackage{paralist}
-# #+LaTeX_HEADER: \addtokomafont{subsection}{\normalsize}
-# #+LaTeX_HEADER: \let\itemize\compactitem
-# #+LaTeX_HEADER: \let\description\compactdesc
-# #+LaTeX_HEADER: \let\enumerate\compactenum
+#+LaTeX_HEADER: \usepackage{paralist}
+#+LaTeX_HEADER: \let\itemize\compactitem
+#+LaTeX_HEADER: \let\description\compactdesc
 #+LaTeX_HEADER: \usepackage[scaled]{berasans}
-#+LaTeX_HEADER: \usepackage[cache=false]{minted}
-#+LaTeX_HEADER: \usemintedstyle{emacs}
 #+LaTeX_HEADER: \makeatletter
 #+LaTeX_HEADER: \renewcommand\maketitle{\begin{center} {\Large\bfseries\sffamily \@title \hspace{0.4em} {\tiny\sffamily \@date} \par\vspace{0.7em}} \end{center}}
 #+LaTeX_HEADER: \makeatother
-#+LaTeX_HEADER: \setlist[enumerate]{label=\alph*. }
-#+LaTeX_HEADER: \renewcommand{\thesection}{\arabic{section}.}
-
-#+OPTIONS: H:2 num:2 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil -:t ::t \n:nil f:t *:t <:t
+#+LaTeX_HEADER: \renewcommand{\thesection}{\Roman{section}}
+#+LaTeX_HEADER: \renewcommand{\labelitemii}{$-$}
+#+OPTIONS: H:2 num:1 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil \n:nil f:t *:t
 
 
 :Rational:
@@ -34,7 +28,7 @@ When exporting:
 * Orchestration
 ** TODO Configure Salt master in prod/staging/testing [50%]
 - [ ] configure nginx of the pgserver to serve the different salt dbs
-- [X] change 'pg_hba' configuration
+- [X] change 'pg_hba' configuration.
 In the pgserver we need to accept all traffic from 195.244.162.100
 to allow the testing and staging saltmaster to connect.
 ** TODO Support other stacks [%]
@@ -43,12 +37,13 @@ to allow the testing and staging saltmaster to connect.
 - [ ] remove certs
 ** TODO Write SOP
 * Puppet 3
-** TODO Update middleware servers to CentOS 7.2
+** TODO Update middleware servers to CentOS 7.2.
 All servers can be upgraded except the jenkins/slaves
 - [ ] upgrades all servers but jenkins/slaves
 - [ ] create a docker image for Pulp Admin
 ** TODO Migration
 *** TODO middleware
+Some explanation here
 *** TODO all jenkins slaves                                  :jenkins:puppet:
 # deps on project
 *** TODO all other stacks
@@ -85,6 +80,10 @@ CLOSED: [2016-04-01 Fri 18:57]
 Extension des points de service via l'API
 * TOS usage [Boris]
 ** TODO Nexus
+- testing
+Some explanation
+- prod
+Some explanation
 ** TODO use puppet to setup pgserver
 ** TODO use puppet to setup pgpool
 ** TODO use puppet to setup Postgresql
