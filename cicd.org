@@ -12,8 +12,9 @@
 #+LaTeX_HEADER: \makeatother
 #+LaTeX_HEADER: \renewcommand{\thesection}{\Roman{section}.}
 #+LaTeX_HEADER: \renewcommand{\theparagraph}{\small(\arabic{paragraph})}
-#+LaTeX_HEADER: \renewcommand{\labelitemii}{$-$}
-#+OPTIONS: H:2 num:5 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil \n:nil f:t *:t
+#+LaTeX_HEADER: \renewcommand\labelenumi{\textbullet}
+#+LaTeX_HEADER: \renewcommand{\labelitemi}{$-$}
+#+OPTIONS: H:2 num:4 title:t tags:nil tasks:todo todo:nil e:t d:nil p:nil \n:nil f:t *:t
 
 
 :Rational:
