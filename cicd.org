@@ -1,5 +1,5 @@
 #+TITLE: TODO CICD
-#+LaTeX_CLASS: pi3r-org-article
+#+LaTeX_CLASS: pi3r-org-paragraph
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
 #+LaTeX_CLASS_OPTIONS: [numbers=noenddot,colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
 #+LaTeX_HEADER: \addtokomafont{section}{\large}
