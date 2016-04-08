@@ -1,5 +1,5 @@
 #+TITLE: TODO CICD
-#+LaTeX_CLASS: pi3r-org-article
+#+LaTeX_CLASS: pi3r-org-sec
 #+TAGS: jenkins(j) docker(d) salt(s) pgserver(g) pulp(u) puppet(p)
 #+LaTeX_CLASS_OPTIONS: [numbers=noenddot,colorlinks=true,urlcolor=blue,headinclude=false,headings=normal]
 #+LaTeX_HEADER: \addtokomafont{subsection}{\normalsize}
@@ -29,8 +29,9 @@ When exporting:
 :END:
 
 * Orchestration
-** TODO Configure Salt master in prod/staging/testing [50%]
-- [ ] configure nginx of the pgserver to serve the different salt dbs
+** TODO Configure Salt master in prod/staging/testing [100%]
+- [X] Update saltminion in el6.
+- [X] configure nginx of the pgserver to serve the different salt dbs
 - [X] change 'pg_hba' configuration
 In the pgserver we need to accept all traffic from 195.244.162.100
 to allow the testing and staging saltmaster to connect.
@@ -59,6 +60,8 @@ CLOSED: [2016-03-24 Thu 17:19]
 - [ ] change librarian to write on disk with the local userid :docker:puppet:
 - [ ] language-puppet job
 ** TODO Write SOP
+* Jenkins
+** TODO Fix sandbox automatic build after git push
 * Support/Services
 ** Improve the puppet stack update process
 ** Support CICD for "projects"
@@ -78,6 +81,7 @@ CLOSED: [2016-04-01 Fri 18:57]
 - [X] prod
 - [X] testing
 * Postgrest
+- [ ] fix reloading of the daemon this is not automatically done by puppet apparently
 * VCloud API
 Extension des points de service via l'API
 * TOS usage [Boris]
